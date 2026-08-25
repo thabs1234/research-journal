@@ -17,38 +17,40 @@
   <a href="south-african-research.html">South African Research</a>
   <a href="methodology.html">Methodology</a>
   <a href="about.html">About</a>
+  <a href="contact.html">Request pilot</a>
 </div></nav>
 <main><article class="wrap">
   <p class="meta">South African Research · health-comms pilot request</p>
   <h2>Request the SA Health-Comms Pilot</h2>
   <p class="lede">The <a href="south-african-research.html#pitch">mechanism-first health-comms system</a> is ready to
   pilot: 30 SA-localised scripts (HIV/TB or NCDs), English + Afrikaans + isiZulu, each ending on a real clinic CTA.
-  Tell me who you are and what you need — I'll reply with a tailored pilot scope.</p>
+  Fill in below and hit send — it opens a pre-filled email to me. No account, no API key, no tracking.</p>
 
   <div class="card">
-    <form action="https://formspree.io/f/REPLACE_ME" method="POST">
+    <!-- Keyless mailto form: works with no backend / no signup. The script below
+         assembles the email body from the fields on submit. -->
+    <form id="pilotForm" onsubmit="return buildMail(event)">
       <h4>Your details</h4>
       <p><label>Name / organisation<br>
-        <input type="text" name="org" required style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></label></p>
+        <input type="text" name="org" id="org" required style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></label></p>
       <p><label>Email<br>
-        <input type="email" name="email" required style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></label></p>
+        <input type="email" name="email" id="email" required style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></label></p>
       <h4>What you need</h4>
       <p><label>Buyer / context (DoH province? NGO? foundation?)<br>
-        <input type="text" name="buyer" style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></label></p>
+        <input type="text" name="buyer" id="buyer" style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></label></p>
       <p><label>Condition area (HIV/TB, NCDs, maternal, other)<br>
-        <input type="text" name="area" style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></label></p>
+        <input type="text" name="area" id="area" style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></label></p>
       <p><label>Message<br>
-        <textarea name="message" rows="5" style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></textarea></label></p>
+        <textarea name="message" id="message" rows="5" style="width:100%;padding:9px;border-radius:7px;border:1px solid var(--border);background:var(--panel2);color:var(--ink)"></textarea></label></p>
       <p><button type="submit" style="background:var(--accent);color:#06281c;border:0;padding:12px 22px;border-radius:8px;font-weight:700;cursor:pointer">Send pilot request</button></p>
-      <p class="meta">Powered by Formspree (free tier). Replace <code>REPLACE_ME</code> in the form action with your Formspree form ID.</p>
+      <p class="meta">Opens your email app pre-filled to <b>lehauthabang@gmail.com</b>. Send it and I'll reply with a tailored pilot scope.</p>
     </form>
   </div>
 
   <div class="note">
-    <b>No form ID yet?</b> Two free alternatives: (1) open an
-    <a href="https://github.com/thabs1234/research-journal/issues">issue on the repo</a>, or
-    (2) email the address listed in <a href="about.html">About</a>. The form above is the cleanest path once a
-    Formspree ID is dropped in.
+    <b>Prefer a server-side form (no email app)?</b> Drop a <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a>
+    form ID into the commented <code>action</code> in <code>contact.html</code> and switch the form to POST — the repo
+    README documents the two-line change. Everything here stays free.
   </div>
 
   <hr>
@@ -57,5 +59,25 @@
 <footer class="site"><div class="wrap">
   <span>Research Journal</span><span><a href="https://github.com/thabs1234/research-journal">GitHub</a> · public · free</span>
 </div></footer>
+<script>
+function buildMail(e){
+  e.preventDefault();
+  var org=encodeURIComponent(document.getElementById('org').value||'(not given)');
+  var em=encodeURIComponent(document.getElementById('email').value||'(not given)');
+  var buyer=encodeURIComponent(document.getElementById('buyer').value||'(not given)');
+  var area=encodeURIComponent(document.getElementById('area').value||'(not given)');
+  var msg=encodeURIComponent(document.getElementById('message').value||'(none)');
+  var subject=encodeURIComponent('SA Health-Comms Pilot request — '+document.getElementById('org').value);
+  var body=encodeURIComponent(
+    'Organisation: '+(document.getElementById('org').value||'')+'\n'+
+    'Email: '+(document.getElementById('email').value||'')+'\n'+
+    'Buyer / context: '+(document.getElementById('buyer').value||'')+'\n'+
+    'Condition area: '+(document.getElementById('area').value||'')+'\n'+
+    'Message:\n'+(document.getElementById('message').value||'')
+  );
+  window.location.href='mailto:lehauthabang@gmail.com?subject='+subject+'&body='+body;
+  return false;
+}
+</script>
 </body>
 </html>

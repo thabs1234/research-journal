@@ -30,38 +30,40 @@
   <code>abs:"agentic" OR "large language model" OR "LLM agent"</code>, newest-first, and writes a dated markdown
   digest. Below is the 2026-08-25 run (8 papers). Full history lives in
   <code>profiles/researcher/memories/research_digest/</code> and is mirrored in <a href="https://github.com/thabs1234/research-journal/tree/main/source">/source</a>.</p>
-
+  <!-- ARXIV:START -->
   <div class="paper">
-    <b>How to Train a Critic Stably and Efficiently</b> — P. Qi, X. Zhou, W. S. Lee · <a href="http://arxiv.org/abs/2608.23566v1">2608.23566</a>
-    <div class="src">GRPO avoids a critic by sampling multiple responses; a reliable critic could estimate token-level advantage from one. Standard critic recipes are unstable — this studies that instability.</div>
+    <b>How to Train a Critic Stably and Efficiently</b> — Penghui Qi, Xiangxin Zhou, Wee Sun Lee · <a href="http://arxiv.org/abs/2608.23566v1">2608.23566v1</a>
+    <div class="src">Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token-level advantages from one response, but standard critic-based training recipes are often unstable. We study this instab</div>
   </div>
   <div class="paper">
-    <b>SWE Refactor Bench: long-horizon whole-repository stack migration?</b> — D. Hong, Y. Chi, W. Li · <a href="http://arxiv.org/abs/2608.23564v1">2608.23564</a>
-    <div class="src">Can coding agents autonomously perform decade-scale migrations existing benchmarks can't test? New long-horizon eval.</div>
+    <b>SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration?</b> — Deyao Hong, Yizhe Chi, Wenyi Li · <a href="http://arxiv.org/abs/2608.23564v1">2608.23564v1</a>
+    <div class="src">Modern software systems accumulate technical debt over decades of development, which makes migration expensive and largely manual. As coding agents become increasingly capable at bug fixing, can they autonomously perform such migrations? Existing benchmarks cannot answer this question because they evaluate only behavio</div>
   </div>
   <div class="paper">
-    <b>Prime Agent: A Self-Improving RLM Harness</b> — S. Karten, A. L. Zhang, K. Thomas · <a href="http://arxiv.org/abs/2608.23552v1">2608.23552</a>
-    <div class="src">Open-source harness with a persistent IPython REPL following the Recursive Language Model abstraction for long-horizon coding workflows.</div>
+    <b>Prime Agent: A Self-Improving RLM Harness</b> — Seth Karten, Alex L. Zhang, Kevin Thomas · <a href="http://arxiv.org/abs/2608.23552v1">2608.23552v1</a>
+    <div class="src">Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long-horizon evaluation and coding-agent workflows. A persistent IPython REPL follows the Recursive Language Model abstracti</div>
   </div>
   <div class="paper">
-    <b>When "Do Not" Is Not Deny: CLAUDE.md vs built-in controls</b> — T. Yan · <a href="http://arxiv.org/abs/2608.23550v1">2608.23550</a>
-    <div class="src">Measures the gap between natural-language "do not" instructions and Claude Code's hard deny in 481 public CLAUDE.md files. Directly relevant to agent safety.</div>
+    <b>When "Do Not" Is Not Deny: Security Rules in CLAUDE.md vs Built-In Controls</b> — Ting Yan · <a href="http://arxiv.org/abs/2608.23550v1">2608.23550v1</a>
+    <div class="src">In CLAUDE.md, "do not" is a natural-language instruction that the model interprets. Claude Code's deny is a built-in control that blocks an action before the agent can take it. Both can express the same security goal, but they control the agent in different ways. We measure this gap in 481 public CLAUDE.md files. An LL</div>
   </div>
   <div class="paper">
-    <b>The Interaction Tax: diversity loss in multi-agent teams</b> — S. E. Ann, H. Liu, C. Tan · <a href="http://arxiv.org/abs/2608.23541v1">2608.23541</a>
-    <div class="src">Does multi-agent LLM interaction help or hurt? Finds communication can erase diversity under equal budgets.</div>
+    <b>The Interaction Tax: When Communication Erases Diversity in Multi-Agent Teams</b> — Summer Eunhyung Ann, Haokun Liu, Chenhao Tan · <a href="http://arxiv.org/abs/2608.23541v1">2608.23541v1</a>
+    <div class="src">Does multi-agent LLM interaction help or hurt? Some work reports gains from debate (Du et al., 2024), critique loops (Chen et al., 2025), and mixture-of-agents synthesis (Wang et al., 2025), while other work finds that interaction adds cost without improving quality under equal budgets (Tran & Kiela, 2026; Xu et al., 2</div>
   </div>
   <div class="paper">
-    <b>EarthVerse: scientific agents across dynamic Earth systems</b> — Z. Cui, X. Yin, Y. Tang · <a href="http://arxiv.org/abs/2608.23525v1">2608.23525</a>
-    <div class="src">Benchmark evaluating scientific agents on changing physical processes + natural hazards.</div>
+    <b>EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards</b> — Zhiqing Cui, Xinxiang Yin, Yihong Tang · <a href="http://arxiv.org/abs/2608.23525v1">2608.23525v1</a>
+    <div class="src">Earth-system analysis reconstructs changing physical processes from observations that differ in source, scale, timing, and modality. Natural hazards make this work consequential because incomplete evidence can change estimates of severity, exposure, and mechanism. We introduce EarthVerse, a benchmark that evaluates sci</div>
   </div>
   <div class="paper">
-    <b>Action-Aligned Retrieval w/ pairwise multimodal reranking (person anomaly search)</b> — T.-K. Nguyen et al. · <a href="http://arxiv.org/abs/2608.23503v1">2608.23503</a>
+    <b>Action-Aligned Retrieval with Pairwise Multimodal Reranking for Text-Based Person Anomaly Search</b> — Thanh-Khoi Nguyen, Thanh-Nhan Vo, Trong-Thuan Nguyen · <a href="http://arxiv.org/abs/2608.23503v1">2608.23503v1</a>
+    <div class="src">Text-based person anomaly search requires distinguishing individuals based on fine-grained, context-dependent behaviors rather than mere appearance. Existing methods struggle to capture these context-conditioned actions, frequently relying on isolated skeletal geometry, discarding raw query details during reformulation</div>
   </div>
   <div class="paper">
-    <b>An Interactive Agent for Requirement-Driven Candidate Sourcing</b> — Y. He, F. Li, X. Ru · <a href="http://arxiv.org/abs/2608.23501v1">2608.23501</a>
-    <div class="src">Framing "find me people from a description" as a requirements-engineering task for LLM agents.</div>
+    <b>An Interactive Agent for Requirement-Driven Candidate Sourcing</b> — Yuanpeng He, Fangjing Li, Xiangyu Ru · <a href="http://arxiv.org/abs/2608.23501v1">2608.23501v1</a>
+    <div class="src">Finding people from a natural-language description (``ML engineers transitioning to research roles in biotech'') is increasingly delegated to LLM agents and framed as information retrieval. We argue that it is fundamentally a requirements engineering task: such a request is an under-determined requirement with implicit</div>
   </div>
+  <!-- ARXIV:END -->
 
   <hr>
   <h3 id="ijep">2 · iJEP Studio — creator intelligence</h3>

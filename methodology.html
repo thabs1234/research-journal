@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology — Research Journal</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <h1>Research Journal</h1>
+  <span class="tag">How the runs were done</span>
+</div></header>
+<nav class="top"><div class="wrap">
+  <a href="index.html">Home</a>
+  <a href="deep-research.html">Deep Research</a>
+  <a href="south-african-research.html">South African Research</a>
+  <a class="active" href="methodology.html">Methodology</a>
+  <a href="about.html">About</a>
+</div></nav>
+<main><article class="wrap">
+  <p class="meta">Last updated 2026-08-25</p>
+  <h2>Methodology &amp; transparency</h2>
+  <p class="lede">Every discovery on this journal was produced by an automated or semi-automated run on Thabang's
+  Windows machine. We publish the method next to the result so claims can be checked.</p>
+
+  <h3>1 · What blocked, what worked</h3>
+  <ul>
+    <li><b>Nous web gateway DOWN</b> for parts of these runs — <code>web_search</code> / <code>web_extract</code>
+      returned "not available". Fallback was the <b>terminal</b>, which has direct internet, and the keyless
+      <code>ddgs</code> search ring.</li>
+    <li><b>TikTok Slardar WAF</b> blocks bare <code>curl</code>, <code>yt-dlp</code>, and the post-list API from this
+      host. What worked: <code>tiktok.com/oembed?url=…</code> (returns title+author, no WAF) and a logged-in Chrome
+      tab captured via computer_use AX-tree (real per-video like counts).</li>
+    <li><b>Gecho Bridge MCP</b> is registered but its tools only load after a Hermes desktop-app restart — so some
+      per-video metrics were captured manually via the AX-tree instead.</li>
+  </ul>
+
+  <h3>2 · arXiv digest (automated, stable)</h3>
+  <p>The researcher-profile cron (<code>research_digest.py</code>, stdlib-only) queries arXiv's public API, writes a
+  dated markdown file, and keeps a rolling <code>index.md</code>. Output is timestamp-free so a future monitor-mode
+  hash could suppress unchanged runs. Runs daily at 06:30 SAST (Mon–Fri).</p>
+
+  <h3>3 · Creator intelligence method</h3>
+  <ol>
+    <li>Identify the handle from a paste / link.</li>
+    <li>Confirm niche + bio from a WAF-clear mirror (tiktokv.com) or YouTube (yt-dlp, no WAF).</li>
+    <li>Capture real engagement via oEmbed or a logged-in AX-tree snapshot.</li>
+    <li>Reverse-engineer the hook/format from titles + pillar rotation.</li>
+    <li>Record caveats explicitly (what was NOT retrievable).</li>
+  </ol>
+
+  <h3>4 · SA health-comms research</h3>
+  <p>Burden facts sourced from Wikipedia "Health in South Africa" / "HIV/AIDS in South Africa" (2025) plus SAMRC/WHO
+  context. The <b>format</b> was reverse-engineered from 32 real <code>@medicalsciencefacts</code> videos with live
+  like counts. Scripts localise that format to SA burden and SA clinic CTAs; they are <b>educational only</b> and
+  align with DoH test-and-treat / U=U messaging. Clinical claims in isiZulu variants are flagged for native review
+  (noun-class agreement) before any paid/brand post.</p>
+
+  <h3>5 · Provenance</h3>
+  <p>Every page cites its source <code>.md</code> file. Raw sources are mirrored in
+  <a href="https://github.com/thabs1234/research-journal/tree/main/source">/source</a> on the public repo, so any
+  reader can diff the published page against the original run output.</p>
+
+  <hr>
+  <p class="meta">This page is itself a deliverable of the publishing run — written so the journal is citable, not just a blog.</p>
+</article></main>
+<footer class="site"><div class="wrap">
+  <span>Research Journal</span><span><a href="https://github.com/thabs1234/research-journal">GitHub</a> · public · free</span>
+</div></footer>
+</body>
+</html>

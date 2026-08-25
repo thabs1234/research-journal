@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deep Research — Research Journal</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <h1>Research Journal</h1>
+  <span class="tag">Deep Research stream · global &amp; general</span>
+</div></header>
+<nav class="top"><div class="wrap">
+  <a href="index.html">Home</a>
+  <a class="active" href="deep-research.html">Deep Research</a>
+  <a href="south-african-research.html">South African Research</a>
+  <a href="methodology.html">Methodology</a>
+  <a href="about.html">About</a>
+</div></nav>
+<main><article class="wrap">
+  <p class="meta">Stream: Deep Research · last updated 2026-08-25</p>
+  <h2>Deep Research</h2>
+  <p class="lede">General, frontier-facing studies produced by parallel runs — not anchored to one country.
+  Includes an automated arXiv sweep and three creator-intelligence studies that reverse-engineer why
+  certain science/security short-form accounts win.</p>
+
+  <h3 id="arxiv">1 · arXiv Agentic-AI Digest (automated)</h3>
+  <p><span class="flag">source: researcher profile cron</span> A daily, token-free cron job queries arXiv for
+  <code>abs:"agentic" OR "large language model" OR "LLM agent"</code>, newest-first, and writes a dated markdown
+  digest. Below is the 2026-08-25 run (8 papers). Full history lives in
+  <code>profiles/researcher/memories/research_digest/</code> and is mirrored in <a href="https://github.com/thabs1234/research-journal/tree/main/source">/source</a>.</p>
+
+  <div class="paper">
+    <b>How to Train a Critic Stably and Efficiently</b> — P. Qi, X. Zhou, W. S. Lee · <a href="http://arxiv.org/abs/2608.23566v1">2608.23566</a>
+    <div class="src">GRPO avoids a critic by sampling multiple responses; a reliable critic could estimate token-level advantage from one. Standard critic recipes are unstable — this studies that instability.</div>
+  </div>
+  <div class="paper">
+    <b>SWE Refactor Bench: long-horizon whole-repository stack migration?</b> — D. Hong, Y. Chi, W. Li · <a href="http://arxiv.org/abs/2608.23564v1">2608.23564</a>
+    <div class="src">Can coding agents autonomously perform decade-scale migrations existing benchmarks can't test? New long-horizon eval.</div>
+  </div>
+  <div class="paper">
+    <b>Prime Agent: A Self-Improving RLM Harness</b> — S. Karten, A. L. Zhang, K. Thomas · <a href="http://arxiv.org/abs/2608.23552v1">2608.23552</a>
+    <div class="src">Open-source harness with a persistent IPython REPL following the Recursive Language Model abstraction for long-horizon coding workflows.</div>
+  </div>
+  <div class="paper">
+    <b>When "Do Not" Is Not Deny: CLAUDE.md vs built-in controls</b> — T. Yan · <a href="http://arxiv.org/abs/2608.23550v1">2608.23550</a>
+    <div class="src">Measures the gap between natural-language "do not" instructions and Claude Code's hard deny in 481 public CLAUDE.md files. Directly relevant to agent safety.</div>
+  </div>
+  <div class="paper">
+    <b>The Interaction Tax: diversity loss in multi-agent teams</b> — S. E. Ann, H. Liu, C. Tan · <a href="http://arxiv.org/abs/2608.23541v1">2608.23541</a>
+    <div class="src">Does multi-agent LLM interaction help or hurt? Finds communication can erase diversity under equal budgets.</div>
+  </div>
+  <div class="paper">
+    <b>EarthVerse: scientific agents across dynamic Earth systems</b> — Z. Cui, X. Yin, Y. Tang · <a href="http://arxiv.org/abs/2608.23525v1">2608.23525</a>
+    <div class="src">Benchmark evaluating scientific agents on changing physical processes + natural hazards.</div>
+  </div>
+  <div class="paper">
+    <b>Action-Aligned Retrieval w/ pairwise multimodal reranking (person anomaly search)</b> — T.-K. Nguyen et al. · <a href="http://arxiv.org/abs/2608.23503v1">2608.23503</a>
+  </div>
+  <div class="paper">
+    <b>An Interactive Agent for Requirement-Driven Candidate Sourcing</b> — Y. He, F. Li, X. Ru · <a href="http://arxiv.org/abs/2608.23501v1">2608.23501</a>
+    <div class="src">Framing "find me people from a description" as a requirements-engineering task for LLM agents.</div>
+  </div>
+
+  <hr>
+  <h3 id="ijep">2 · iJEP Studio — creator intelligence</h3>
+  <p><span class="flag">source: ijep_studio_research/profile.md</span> <b>iJEP Studio</b> is a Boston-based
+  PhD structural-biology animation studio (TikTok <code>@ijep.studio</code>), 31.4K followers / 429.4K total
+  likes / 98 videos, 0 following (pure broadcaster). Niche: cinematic 3D molecular-biology explainers, no face.</p>
+  <h4>What wins</h4>
+  <ul>
+    <li><b>Signature pillar — Molecular Machines:</b> ATP synthase, bacterial flagellar motor, ribosome, CRISPR-Cas9, DNA helicase, photosystem II.</li>
+    <li><b>Hook levers:</b> superlative ("Most Powerful Molecular Motor Ever Discovered"), mystery, scale awe.</li>
+    <li><b>Format:</b> cinematic 3D, no talking head, visual-first; B2B conversion via <code>ijepstudio.com</code> → paid animation gigs (labs, journals, pharma).</li>
+    <li><b>Takeaway:</b> it's a <i>studio brand, not a persona</i>. Clone model: "stunning 3D science, no face, strong title, consistent pillar rotation."</li>
+  </ul>
+  <p class="meta">Caveat: per-video like counts not retrievable — TikTok WAF blocked this host; no live logged-in tab. Likes/follower ratio (~13.7) is a reach signal, not full engagement rate.</p>
+
+  <hr>
+  <h3 id="msf">3 · @medicalsciencefacts — the 574K-like format, reverse-engineered</h3>
+  <p><span class="flag">source: msf_research/medicalsciencefacts_profile.md</span> General human-body / health-science
+  educator. 32 videos captured live with <b>real per-video like counts</b> (sum ≈ 1.0M).</p>
+  <table>
+    <tr><th>Pillar</th><th>Videos</th><th>Total likes</th><th>Read</th></tr>
+    <tr><td>Hernia / abdominal</td><td>5</td><td>623,553</td><td>🔥 viral engine — one video 574.1K</td></tr>
+    <tr><td>Cancer explainers</td><td>6</td><td>288,680</td><td>breast diagnosis 213K</td></tr>
+    <tr><td>Reproductive</td><td>~9</td><td>36,437</td><td>⚠️ underperforms (pregnancy/milk ~1.3K)</td></tr>
+    <tr><td>Brain/Neuro</td><td>2</td><td>36,739</td><td>migraine 31.5K</td></tr>
+    <tr><td>Heart/Circulatory</td><td>2</td><td>2,876</td><td>weak (bypass 1.4K)</td></tr>
+    <tr><td>Obesity (metabolic)</td><td>1</td><td>860</td><td>lowest</td></tr>
+  </table>
+  <p><b>Transferable lesson:</b> audiences engage with the <i>hidden mechanism</i> of a real condition
+  ("what really happens when…?", "a look inside") — not the outline of something familiar. Keystone hook:
+  <code>name the thing → show the steps/mechanism → flag the danger → soft CTA</code>. This format is portable
+  across languages and health systems — which is exactly what the SA stream exploits (next page).</p>
+
+  <hr>
+  <h3 id="byal">4 · @byalmuyousef — vibe-coding security creator</h3>
+  <p><span class="flag">source: byalmuyousef_research.md</span> TikTok creator teaching Claude Code + web-security
+  habits to solo devs. Studied via a <b>WAF-bypass + oEmbed technique</b> (TikTok Slardar WAF blocks bare curl/yt-dlp;
+  <code>oembed?url=…</code> returns title+author with no WAF). Content pillars: AI-assisted secure coding, Claude Code
+  personalisation, teaching agents skills, vibe-coding risk awareness ("your app ships fast and leaks faster").</p>
+  <p class="meta">Method note saved as a reusable approach: DDG HTML for discovery + TikTok oEmbed for confirmation,
+  with cooldown between queries. Cross-platform (YouTube/X/blog) unconfirmed in that pass.</p>
+
+  <hr>
+  <p class="meta">Raw sources mirrored in <a href="https://github.com/thabs1234/research-journal/tree/main/source/deep">/source/deep</a>.</p>
+</article></main>
+<footer class="site"><div class="wrap">
+  <span>Research Journal</span><span><a href="https://github.com/thabs1234/research-journal">GitHub</a> · public · free</span>
+</div></footer>
+</body>
+</html>
